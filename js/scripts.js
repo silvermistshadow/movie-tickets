@@ -5,8 +5,29 @@ function Ticket(MovieName, timeOfDay, age) {
   this.age = age;
 }
 
-Ticket.prototype.getPrice = function() {
-  
+Ticket.prototype.getPrice = function(ticket) {
+  var basePrice = 10
+  var totalPrice = basePrice
+  if (ticket.MovieName.isFirstRelease = true) {
+    totalPrice += 10
+  }
+  else {
+    totalPrice += 5
+  }
+  if (ticket.timeOfDay === "Matinee") {
+    totalPrice += 5
+  }
+  else if (ticket.timeofDay !== "Midnight") {
+    totalPrice += 10
+  }
+  else {
+    totalPrice += 15
+  }
+  if (ticket.age >= 60) {
+    totalPrice -= 10
+  }
+  var dollarPrice = "$" + totalPrice.toString();
+  return dollarPrice;
 }
 
 function MovieName(name, isFirstRelease) {
@@ -22,3 +43,7 @@ function MovieName(name, isFirstRelease) {
 
 
 //User interface past this point
+
+$(document).ready(function() {
+
+})
