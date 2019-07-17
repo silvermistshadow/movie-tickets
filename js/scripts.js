@@ -35,11 +35,8 @@ function MovieName(name, isFirstRelease) {
   this.isFirstRelease = isFirstRelease;
 }
 
-
-
-
-
-
+var endgame = new MovieName("Avengers: Endgame", true);
+var captMarvel = new MovieName("Captain Marvel", false);
 
 
 //User interface past this point
