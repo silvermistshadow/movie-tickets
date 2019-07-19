@@ -1,0 +1,9 @@
+#ticketPrice {
+  display: none;
+}
+
+#new-ticket {
+  max-width: 500px;
+  overflow: hidden;
+  white-space: nowrap;
+}

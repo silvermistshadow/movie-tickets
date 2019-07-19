@@ -37,10 +37,31 @@ function MovieName(name, isFirstRelease) {
 
 var endgame = new MovieName("Avengers: Endgame", true);
 var captMarvel = new MovieName("Captain Marvel", false);
-
+var dectPikachu = new MovieName("Detective Pikachu", true);
+var holyGrail = new MovieName("Monty Python and the Holy Grail", false);
+var movies = [endgame, captMarvel, dectPikachu, holyGrail]
 
 //User interface past this point
 
-$(document).ready(function() {
 
-})
+$(document).ready(function() {
+  $("#new-ticket").submit(function(event) {
+    event.preventDefault();
+    var inputAge = parseInt($("input#inputAge").val());
+    var inputName = $("input#inputName").val();
+    var showName = $("#showName").val();
+    var inputTOD = $("#inputTOD").val();
+
+    var inputTicket = new Ticket(movies[parseInt(showName)], inputTOD, inputAge )
+    var ticketPrice = inputTicket.getPrice();
+
+    $("#nameOut").html(inputName)
+    if (inputTicket.age >= 60) {
+      $("#ageDiscount").html("Yes");
+    }
+    else {
+      $("#ageDiscount").html("No")
+    }
+    $("#showTime").html(ticket.timeofDay)
+  });
+});
