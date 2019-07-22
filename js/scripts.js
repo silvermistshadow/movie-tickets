@@ -8,7 +8,7 @@ function Ticket(MovieName, timeOfDay, age) {
 Ticket.prototype.getPrice = function() {
   var basePrice = 10
   var totalPrice = basePrice
-  if (this.MovieName.isFirstRelease = true) {
+  if (this.MovieName.isFirstRelease === true) {
     totalPrice += 10
   }
   else {
@@ -17,7 +17,7 @@ Ticket.prototype.getPrice = function() {
   if (this.timeOfDay === "Matinee") {
     totalPrice += 5
   }
-  else if (this.timeofDay !== "Midnight") {
+  else if (this.timeOfDay !== "Midnight") {
     totalPrice += 10
   }
   else {
@@ -62,7 +62,7 @@ $(document).ready(function() {
     else {
       $("#ageDiscount").html("No")
     }
-    $("#showTime").html(inputTicket.timeofDay)
+    $("#showTime").html(inputTicket.timeOfDay)
     $("#finalPrice").html(ticketPrice)
     $("#ticketPrice").show();
   });
