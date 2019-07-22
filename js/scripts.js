@@ -62,6 +62,8 @@ $(document).ready(function() {
     else {
       $("#ageDiscount").html("No")
     }
-    $("#showTime").html(ticket.timeofDay)
+    $("#showTime").html(inputTicket.timeofDay)
+    $("#finalPrice").html(ticketPrice)
+    $("#ticketPrice").show();
   });
 });
